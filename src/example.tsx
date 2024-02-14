@@ -19,16 +19,10 @@ export const Example = () => {
   };
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit} autoComplete="off">
       <Stack space={1} alignX="left">
-        <TextField label="Name" name="name" width={44} required />
-        <TextField
-          type="email"
-          label="E-Mail"
-          name="email"
-          width={44}
-          required
-        />
+        <TextField label="Name" name="name" required />
+        <TextField type="email" label="E-Mail" name="email" required />
         <Button variant="primary" size="small" type="submit">
           Submit
         </Button>
