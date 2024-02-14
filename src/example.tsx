@@ -6,7 +6,7 @@ interface User {
   email: string;
 }
 
-export const App = () => {
+export const Example = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // Prevent page refresh.
     e.preventDefault();
@@ -20,7 +20,7 @@ export const App = () => {
 
   return (
     <Form onSubmit={onSubmit}>
-      <Stack space={1}>
+      <Stack space={1} alignX="left">
         <TextField label="Name" name="name" width={44} required />
         <TextField
           type="email"
