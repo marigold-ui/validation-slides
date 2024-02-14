@@ -1,0 +1,170 @@
+<CH.Slideshow autoFocus>
+
+```tsx example.tsx
+export const App = () => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Prevent page refresh.
+    e.preventDefault();
+
+    // Transform form data to regular object
+    const { name, email } = getFormData<User>(e.currentTarget);
+
+    // Post form data
+    post({ name, email });
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <Stack space={1}>
+        <TextField label="Name" name="name" />
+        <TextField label="E-Mail" name="email" />
+        <Button variant="primary" size="small" type="submit">
+          Submit
+        </Button>
+      </Stack>
+    </form>
+  );
+};
+```
+
+---
+
+```tsx example.tsx focus=14:22
+
+```
+
+---
+
+```tsx example.tsx focus=2:11,14[11:29]
+
+```
+
+---
+
+```tsx example.tsx focus=20,23,27
+export const App = () => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Prevent page refresh.
+    e.preventDefault();
+
+    // Transform form data to regular object
+    const { name, email } = getFormData<User>(e.currentTarget);
+
+    // Post form data
+    post({ name, email });
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <Stack space={1}>
+        <TextField label="Name" name="name" required />
+        <TextField type="email" label="E-Mail" name="email" required />
+        <Button variant="primary" size="small" type="submit">
+          Submit
+        </Button>
+      </Stack>
+    </form>
+  );
+};
+```
+
+---
+
+```tsx example.tsx focus=2:5,14:23
+export const App = () => {
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+  });
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Prevent page refresh.
+    e.preventDefault();
+
+    // Transform form data to regular object
+    const { name, email } = getFormData<User>(e.currentTarget);
+
+    // Validate form input
+    const nextErrors = {
+      name: name.length > 0,
+      email: email.length > 0 && /^\S+@\S+\.\S+$/.test(email),
+    };
+    setErrors(nextErrors);
+
+    if (nextErrors.name || nextErrors.email) {
+      return;
+    }
+
+    // Post form data
+    post({ name, email });
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <Stack space={1}>
+        <TextField
+          label="Name"
+          name="name"
+          required
+          error={errors.name}
+          errorMessage="Field is required."
+        />
+        <TextField
+          type="email"
+          label="E-Mail"
+          name="email"
+          required
+          error={errors.email}
+          errorMessage="Please enter a valid email address!"
+        />
+        <Button variant="primary" size="small" type="submit">
+          Submit
+        </Button>
+      </Stack>
+    </form>
+  );
+};
+```
+
+---
+
+```tsx example.tsx focus=37:38,46:47
+
+```
+
+---
+
+```tsx example.tsx
+
+```
+
+---
+
+```tsx example.tsx
+export const App = () => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Prevent page refresh.
+    e.preventDefault();
+
+    // Transform form data to regular object
+    const { name, email } = getFormData<User>(e.currentTarget);
+
+    // Post form data
+    post({ name, email });
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <Stack space={1}>
+        <TextField label="Name" name="name" required />
+        <TextField type="email" label="E-Mail" name="email" required />
+        <Button variant="primary" size="small" type="submit">
+          Submit
+        </Button>
+      </Stack>
+    </form>
+  );
+};
+```
+
+</CH.Slideshow>
