@@ -17,7 +17,7 @@ export const Frame = ({ children }) => (
           <div className="ch-frame-button ch-frame-button-right"></div>
         </div>
       </div>
-      <div style={{ padding: 24, background: "#fff" }}>{children}</div>
+      <div style={{ padding: 48, background: "#fff" }}>{children}</div>
     </div>
   </div>
 );

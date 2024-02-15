@@ -10,6 +10,21 @@ body {
   background: #f9fafb;
 }
 
+/* LAYOUT */
+.content {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.content-item {
+  scroll-snap-align: start;
+  max-width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+/* CODE HIKE */
 .ch-codegroup {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   border: 1px solid #e5e7eb;
@@ -32,7 +47,7 @@ body {
   display: none;
 }
 
-/*Range Reset*/
+/* SLIDER */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;

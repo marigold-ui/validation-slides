@@ -20,7 +20,7 @@ export const Example = () => {
 
   return (
     <Form onSubmit={onSubmit} autoComplete="off">
-      <Stack space={1} alignX="left">
+      <Stack space={4} alignX="left">
         <TextField label="Name" name="name" required />
         <TextField type="email" label="E-Mail" name="email" required />
         <Button variant="primary" type="submit">

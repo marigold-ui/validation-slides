@@ -7,16 +7,17 @@ import { Example } from "./example";
 import { Frame } from "./Frame";
 
 const App = () => (
-  <div
-    data-theme="b2b"
-    style={{ maxWidth: 900, margin: "0 auto", fontFamily: "sans-serif" }}
-  >
-    <Slides />
-    <Frame>
-      <MarigoldProvider theme={theme}>
-        <Example />
-      </MarigoldProvider>
-    </Frame>
+  <div data-theme="b2b" className="content">
+    <div className="content-item">
+      <Slides />
+    </div>
+    <div className="content-item" style={{ maxWidth: 700 }}>
+      <Frame>
+        <MarigoldProvider theme={theme}>
+          <Example />
+        </MarigoldProvider>
+      </Frame>
+    </div>
   </div>
 );
 
