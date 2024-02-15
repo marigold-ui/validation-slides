@@ -23,7 +23,7 @@ export const Example = () => {
       <Stack space={1} alignX="left">
         <TextField label="Name" name="name" required />
         <TextField type="email" label="E-Mail" name="email" required />
-        <Button variant="primary" size="small" type="submit">
+        <Button variant="primary" type="submit">
           Submit
         </Button>
       </Stack>

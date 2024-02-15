@@ -2,18 +2,21 @@ import "@code-hike/mdx/styles";
 import { MarigoldProvider } from "@marigold/components";
 import theme from "@marigold/theme-b2b";
 
-import Content from "./slideshow.mdx";
+import Slides from "./slideshow.mdx";
 import { Example } from "./example";
+import { Frame } from "./Frame";
 
 const App = () => (
   <div
     data-theme="b2b"
-    style={{ maxWidth: 1024, margin: "0 auto", fontFamily: "sans-serif" }}
+    style={{ maxWidth: 900, margin: "0 auto", fontFamily: "sans-serif" }}
   >
-    <Content />
-    <MarigoldProvider theme={theme}>
-      <Example />
-    </MarigoldProvider>
+    <Slides />
+    <Frame>
+      <MarigoldProvider theme={theme}>
+        <Example />
+      </MarigoldProvider>
+    </Frame>
   </div>
 );
 

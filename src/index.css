@@ -1,3 +1,95 @@
+:root {
+  --slider-background: #e5e7eb;
+  --slider-forefround: #6b7280;
+  --slider-border: #4b5563;
+
+  --focus: #93c5fd;
+}
+
+body {
+  background: #f9fafb;
+}
+
+.ch-codegroup {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid #e5e7eb;
+}
+
 .ch-spotlight-sticker {
   width: 800px;
+}
+
+.ch-slideshow-range button {
+  font-size: 14px;
+}
+
+.ch-slideshow-notes {
+  border: none;
+  margin: 8px;
+}
+
+.ch-slideshow-note {
+  display: none;
+}
+
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--slider-background);
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-color: var(--slider-forefround);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999999px;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid var(--slider-border);
+  outline: 3px solid var(--focus);
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: var(--slider-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  border-radius: 0;
+  background-color: var(--slider-forefround);
+  height: 2rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid var(--slider-border);
+  outline: 3px solid var(--focus);
+  outline-offset: 0.125rem;
 }
