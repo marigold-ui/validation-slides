@@ -41,7 +41,7 @@ body {
 }
 
 .slide ul {
-  list-style: circle inside;
+  list-style: circle;
 }
 
 .slide li {
