@@ -3,6 +3,7 @@ import { MarigoldProvider } from "@marigold/components";
 import theme from "@marigold/theme-b2b";
 
 import Slides from "./slideshow.mdx";
+import Validation from "./validation.mdx";
 import { Example } from "./example";
 import { Frame } from "./Frame";
 
@@ -17,6 +18,9 @@ const App = () => (
           <Example />
         </MarigoldProvider>
       </Frame>
+    </div>
+    <div className="content-item">
+      <Validation />
     </div>
   </div>
 );

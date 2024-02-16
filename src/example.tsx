@@ -1,4 +1,4 @@
-import { Button, Form, Stack, TextField } from "@marigold/components";
+import { Button, Form, Inline, Stack, TextField } from "@marigold/components";
 import { getFormData, post } from "./utils";
 
 interface User {
@@ -23,9 +23,14 @@ export const Example = () => {
       <Stack space={4} alignX="left">
         <TextField label="Name" name="name" required />
         <TextField type="email" label="E-Mail" name="email" required />
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <Inline space={2}>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+          <Button variant="secondary" type="reset">
+            Reset
+          </Button>
+        </Inline>
       </Stack>
     </Form>
   );
