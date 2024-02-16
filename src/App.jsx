@@ -4,6 +4,8 @@ import theme from "@marigold/theme-b2b";
 
 import Slides from "./slideshow.mdx";
 import Validation from "./validation.mdx";
+import Conclusion from "./conclusion.mdx";
+
 import { Example } from "./example";
 import { Frame } from "./Frame";
 
@@ -21,6 +23,12 @@ const App = () => (
     </div>
     <div className="content-item">
       <Validation />
+    </div>
+    <div
+      className="content-item"
+      style={{ display: "grid", placeItems: "center" }}
+    >
+      <Conclusion />
     </div>
   </div>
 );
