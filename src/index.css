@@ -57,6 +57,15 @@ body {
   text-decoration-thickness: 2px;
 }
 
+.cta {
+  display: inline-block;
+  border-radius: 16px;
+  font-size: 48px;
+  color: #f0f9ff;
+  background: #075985;
+  padding: 8px 48px;
+}
+
 /* CODE HIKE */
 .ch-codegroup {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);

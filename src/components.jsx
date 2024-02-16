@@ -23,8 +23,8 @@ export const Frame = ({ children }) => (
   </div>
 );
 
-export const Slide = ({ children, maxWidth }) => (
-  <div className="slide" style={{ maxWidth }}>
+export const Slide = ({ children, style }) => (
+  <div className="slide" style={style}>
     <div style={{ width: "100%" }}>{children} </div>
   </div>
 );

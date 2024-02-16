@@ -14,7 +14,7 @@ const App = () => (
     <Slide>
       <Intro />
     </Slide>
-    <Slide maxWidth={700}>
+    <Slide style={{ maxWidth: 700 }}>
       <Frame>
         <MarigoldProvider theme={theme}>
           <Example />
@@ -26,6 +26,11 @@ const App = () => (
     </Slide>
     <Slide>
       <Conclusion />
+    </Slide>
+    <Slide style={{ textAlign: "center" }}>
+      <a className="cta" href="https://www.marigold-ui.io/concepts/validation">
+        Read the documentation!
+      </a>
     </Slide>
   </Slide.Container>
 );
