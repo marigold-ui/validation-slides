@@ -2,35 +2,32 @@ import "@code-hike/mdx/styles";
 import { MarigoldProvider } from "@marigold/components";
 import theme from "@marigold/theme-b2b";
 
-import Slides from "./slideshow.mdx";
+import Intro from "./intro.mdx";
 import Validation from "./validation.mdx";
 import Conclusion from "./conclusion.mdx";
 
 import { Example } from "./example";
-import { Frame } from "./Frame";
+import { Slide, Frame } from "./components";
 
 const App = () => (
-  <div data-theme="b2b" className="content">
-    <div className="content-item">
-      <Slides />
-    </div>
-    <div className="content-item" style={{ maxWidth: 700 }}>
+  <Slide.Container>
+    <Slide>
+      <Intro />
+    </Slide>
+    <Slide maxWidth={700}>
       <Frame>
         <MarigoldProvider theme={theme}>
           <Example />
         </MarigoldProvider>
       </Frame>
-    </div>
-    <div className="content-item">
+    </Slide>
+    <Slide>
       <Validation />
-    </div>
-    <div
-      className="content-item"
-      style={{ display: "grid", placeItems: "center" }}
-    >
+    </Slide>
+    <Slide>
       <Conclusion />
-    </div>
-  </div>
+    </Slide>
+  </Slide.Container>
 );
 
 export default App;

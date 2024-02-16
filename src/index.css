@@ -8,20 +8,53 @@
 
 body {
   background: #f9fafb;
+  height: 100vh;
 }
 
 /* LAYOUT */
-.content {
+.slide-container {
+  height: 100vh;
+  width: 100vw;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
-.content-item {
+.slide {
+  display: grid;
+  place-items: center;
   scroll-snap-align: start;
   max-width: 900px;
   height: 100vh;
   margin: 0 auto;
   padding: 48px 0;
+}
+
+.slide h2 {
+  color: #030712;
+  font-size: clamp(48px, 2vw, 64px);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+.slide ul {
+  list-style: circle inside;
+}
+
+.slide li {
+  color: #374151;
+  font-size: clamp(24px, 2vw, 32px);
+  padding: 4px 0;
+}
+
+.slide strong {
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 
 /* CODE HIKE */

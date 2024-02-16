@@ -1,4 +1,5 @@
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
+
 export const Frame = ({ children }) => (
   <div
     className="ch-codegroup"
@@ -21,3 +22,17 @@ export const Frame = ({ children }) => (
     </div>
   </div>
 );
+
+export const Slide = ({ children, maxWidth }) => (
+  <div className="slide" style={{ maxWidth }}>
+    <div style={{ width: "100%" }}>{children} </div>
+  </div>
+);
+
+const SlideContainer = ({ children }) => (
+  <div data-theme="b2b" className="slide-container">
+    {children}
+  </div>
+);
+
+Slide.Container = SlideContainer;
